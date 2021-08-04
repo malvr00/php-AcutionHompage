@@ -1,0 +1,1 @@
+# PHP Auction Server is Apache

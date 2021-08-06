@@ -7,7 +7,7 @@
   public function __destruct(){}
 
 // userTable 정보 가저오는 Qurey
-  public function seachUserId($sql){
+  public function seachUser($sql){
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();

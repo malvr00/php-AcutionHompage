@@ -8,17 +8,17 @@
   <body>
     <header class="main-header">
       <div class="login-bar">
-        <a href="../controllers/userInOut.php?signtype=1">Sign Up</a>
-        <a href="#">Log In</a>
+        <a href="../controllers/userInOut.php?signtype=1"><?=$userInform?></a>
+        <a href="../controllers/userInOut.php?signtype=2"><?=$userInOut?></a>
       </div>
-      <h1><a href="../php/index.php">Auction</a></h1>
+      <h1><a href="../php/index.php<?=$user?>">Auction</a></h1>
     </header>
     
     <nav class="status-bar">
       <ul>
-        <li><a href="../controllers/writing.php">User bulletin board </a></li>
+        <li><a href="../controllers/writing.php<?=$user?>">User bulletin board </a></li>
         <li><a href="#">Auction bulletin board</a></li>
-        <li><a href="#">Auction Enrollment</li>
+        <li><a href="../controllers/enrollment.php<?=$user?>">Auction Enrollment</li>
         <li><a href="#">Service center</a></li>
       </ul>
     </nav>

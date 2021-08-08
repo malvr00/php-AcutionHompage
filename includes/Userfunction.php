@@ -6,14 +6,14 @@
   }
   public function __destruct(){}
 
-// userTable 정보 가저오는 Qurey
+// userTable User Qurey
   public function seachUser($sql){
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();
   }
   
-// Insert 함수
+// Insert Table
   public function insertData($sql, $param){
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute($param);

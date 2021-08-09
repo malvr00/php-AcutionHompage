@@ -11,3 +11,11 @@
 게시판 Table                                                  댓글 Table
 <img src="https://user-images.githubusercontent.com/77275513/128180023-0b3beca6-69d1-4e2c-889a-8eb3dc6bce46.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img>               <img src="https://user-images.githubusercontent.com/77275513/128180112-35a8215e-3d52-4429-91df-56f3192cb451.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img><br/> 
 </pre>
+
+## Main page
+
+## Auction Page
+
+## LogIn Page
+
+## User bulletin board page

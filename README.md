@@ -12,10 +12,12 @@
 <img src="https://user-images.githubusercontent.com/77275513/128180023-0b3beca6-69d1-4e2c-889a-8eb3dc6bce46.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img>               <img src="https://user-images.githubusercontent.com/77275513/128180112-35a8215e-3d52-4429-91df-56f3192cb451.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img><br/> 
 </pre>
 
-## Main page
+* Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
 
-## Auction Page
+* Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)
 
-## LogIn Page
+* LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)
 
-## User bulletin board page
+* User bulletin board page 
+
+* Form File [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/templates)

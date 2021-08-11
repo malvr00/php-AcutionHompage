@@ -2,6 +2,7 @@
  try{
   include_once __DIR__ .'/../includes/DbConnect.php'; // DB 연결
   include_once __DIR__ .'/../includes/Userfunction.php';  // SQL Class
+  include_once __DIR__ .'/../includes/userInformation.php';   // 로그인 유저정보
   
   $usersFunction = new Userfunction($pdo);  // SQL Class 생성
   
@@ -11,6 +12,7 @@
     
 // 회원가입 로그인 구분. 
 // 1 = 회원가입, 2 = 로그인
+// 3 = 유저정보, 3 = 로그아웃
   if($_GET['signtype'] == '1'){   // 회원가입
     if(!empty($user_id)){
      // 회원가입 자료입력 후 처리
@@ -72,6 +74,8 @@
       include __DIR__ .'/../templates/userInForm.html.php';
       $outString = ob_get_clean();
     }
+  }else if($_GET['signtype'] == '4'){
+    header('location: ../php/index.php');
   }
  }catch(PDOException $e){
   $outString='<p>Error : ' . $e->getMessage(). $e->getFile(). ' Line : ' . $e->getLine() .'</p>';

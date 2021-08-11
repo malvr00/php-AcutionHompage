@@ -12,6 +12,7 @@
 <img src="https://user-images.githubusercontent.com/77275513/128180023-0b3beca6-69d1-4e2c-889a-8eb3dc6bce46.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img>               <img src="https://user-images.githubusercontent.com/77275513/128180112-35a8215e-3d52-4429-91df-56f3192cb451.PNG" width="350px" height="230px" title="100px" alt="RubberDuck"></img><br/> 
 </pre>
 
+## Pages && Includes
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
 
 * Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)

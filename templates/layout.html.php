@@ -17,9 +17,9 @@
     <nav class="status-bar">
       <ul>
         <li><a href="../controllers/writing.php<?=$user?>">User bulletin board </a></li>
-        <li><a href="#">Auction bulletin board</a></li>
+        <li><a href="../controllers/articleItems.php<?=$user?>">Auction bulletin board</a></li>
         <li><a href="../controllers/enrollment.php<?=$user?>">Auction Enrollment</li>
-        <li><a href="#">Service center</a></li>
+        <li><a href="../controllers/auctiondetail.php<?=$user?>">Service center</a></li>
       </ul>
     </nav>
     

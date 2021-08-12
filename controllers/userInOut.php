@@ -16,7 +16,7 @@
   if($_GET['signtype'] == '1'){   // 회원가입
     if(!empty($user_id)){
      // 회원가입 자료입력 후 처리
-      $row = $usersFunction->seachUser('SELECT `user_id` FROM `user`');  // User ID 반환
+      $row = $usersFunction->seachQurey('SELECT `user_id` FROM `user`');  // User ID 반환
       foreach($row as $users){
        // 이미 가입되있는 중복아이디 체크    
         if($users['user_id'] == $user_id){
@@ -49,7 +49,7 @@
   }else if($_GET['signtype'] == '2'){   // 로그인
     if(!empty($user_id)){
       // 로그인 자료입력 후 처리
-      $row = $usersFunction->seachUser('SELECT * FROM `user`');  // User들 정보 반환
+      $row = $usersFunction->seachQurey('SELECT * FROM `user`');  // User들 정보 반환
       foreach($row as $users){
         if($users['user_id'] != $user_id){
          // 아이디 확인

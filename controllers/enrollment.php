@@ -35,10 +35,11 @@
       $imageblob = fread($imgfp, filesize($filename));
       fclose($imgfp);
       
-    // Insert Part
+  // Insert Part
+       // *************************물품등록 Table Save ********************************************/
       $sql = 'INSERT INTO `article` SET `user_id` = :user_id, `article_title` = :article_title, `article_image` = :article_image,
               `article_discription` = :article_discription, `article_price` = :article_price, `article_category` = :article_category,
-              `article_sell` = :article_sell';
+              `article_sell` = :article_sell, `article_end` = :article_end';
       $param = [
           'user_id'=>$_GET['id'], 
           'article_title'=>$title, 
@@ -46,22 +47,28 @@
           'article_discription'=>$discription,
           'article_price'=>$price,
           'article_category'=>$category, 
-          'article_sell'=>$sell
+          'article_sell'=>$sell,
+          'article_end'=>1
       ];
       $usersFunction->insertData($sql,$param);
+            
+       // ************************* 경매물품 입찰&낙찰 Table Save ********************************************/
+              /** 
+                위에서 방금저장한 DB 다시 가져와서
+                auctionItems Table에 물품등록ID 가져와 저장하여 Table연동
+              */
+      $sql = 'SELECT * FROM `article` WHERE `user_id` = \'' . $_GET['id'] . '\' ORDER BY `article_id` DESC';
+      $result = $usersFunction->seachQurey($sql);
       
-    // 출력단
-     /*
-      $sql = 'SELECT * FROM `article`';
-      $stmt = $pdo->prepare($sql);
-      $stmt->execute();
-      $stmt->setFetchMode(PDO::FETCH_ASSOC);
-      $array = $stmt->fetch();
-      
-      echo $category;
-      
-      echo '<img src="data:image/bmp;base64,' . base64_encode( $array['article_image'] ) . '" />';  // 이미지 불러오기*/
-      
+      $sql = 'INSERT INTO `auctionItems` SET `items_articleId` = :items_articleId, `user_id` = :user_id,  
+              `items_price` = :items_price';
+      $param = [
+          'items_articleId'=>$result[0][1],
+          'user_id'=>$_GET['id'],
+          'items_price'=>$result[0][5]
+      ];
+      $usersFunction->insertData($sql, $param);
+            
       //    ****** 수정예정*****
       // 헤더로 물품 상세페이지 이동 
       header('location: ../php/index.php'.$user); // 임시

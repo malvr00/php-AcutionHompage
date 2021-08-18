@@ -50,7 +50,7 @@
           'article_sell'=>$sell,
           'article_end'=>1
       ];
-      $usersFunction->insertData($sql,$param);
+      $usersFunction->uploadData($sql,$param);
             
        // ************************* °æ¸Å¹°Ç° ÀÔÂû&³«Âû Table Save ********************************************/
               /** 

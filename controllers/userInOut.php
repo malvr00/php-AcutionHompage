@@ -34,7 +34,7 @@
             'user_password'=>$user_password
         ];
        // Insert 
-        $usersFunction->insertData('INSERT INTO `user` SET `user_id` = :user_id,`user_password` = :user_password',$param);
+        $usersFunction->uploadData('INSERT INTO `user` SET `user_id` = :user_id,`user_password` = :user_password',$param);
         header('location: ../php/index.php');
       }
     }else{

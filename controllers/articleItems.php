@@ -5,8 +5,10 @@
     include_once __DIR__ .'/../includes/Userfunction.php';      // SQL Class
     
     $usersFunction = new Userfunction($pdo);                    // SQL Class 积己
+    
+  // ********** 殿废等 拱前 Seach ********** //
     $result = $usersFunction->seachQurey('SELECT * FROM `article`');
-    echo $result['article_title'];
+     
     ob_start();
     include __DIR__ .'/../templates/articleItems.html.php';
     $outString = ob_get_clean();

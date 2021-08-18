@@ -14,7 +14,7 @@
   }
   
 // Insert ÇÔ¼ö
-  public function insertData($sql, $param=[]){
+  public function uploadData($sql, $param=[]){
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute($param);
     return $stmt;

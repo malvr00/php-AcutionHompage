@@ -4,7 +4,10 @@
     include_once __DIR__ .'/../includes/userInformation.php';   // 로그인 유저정보
     
     $title = Auction;
-
+    
+    if($_GET['sell'] == '2'){
+      echo '<script name="javascript"> window.alert("congratulations. successful bid!!!!!");</script>';
+    }
  // home 출력
   //ob_start();
     $outString = 'mainpage2';

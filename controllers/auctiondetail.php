@@ -58,6 +58,19 @@
           'article_id'=>$auctionId
         ];
         $usersFunction->uploadData($sql, $param);
+        
+      // ********** UserDetail ³«Âû Update ********** //
+        $sql = 'SELECT COUNT(`items_sfb`) FROM `auctionItems` WHERE `items_sfb`=\'' . $userId . '\'';
+        $result2 = $usersFunction->seachQurey($sql);
+        $sfbCnt = intval($result2[0][0]);   // ³«Âû °³¼ö
+        
+        $sql = 'UPDATE `userInfor` SET `infor_sfb` = :infor_sfb WHERE `user_id` = :user_id';
+        $param = [
+          'infor_sfb'=>$sfbCnt,
+          'user_id'=>$userId
+        ];
+        $usersFunction->uploadData($sql, $param);
+        
         header('location: ../php/index.php?id=' . $userId . '&sell=' . 2);
       }
     }

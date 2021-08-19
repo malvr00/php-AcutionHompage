@@ -12,7 +12,7 @@
     
 // 회원가입 로그인 구분. 
 // 1 = 회원가입, 2 = 로그인
-// 3 = 유저정보, 3 = 로그아웃
+// 3 = 유저정보, 4 = 로그아웃
   if($_GET['signtype'] == '1'){   // 회원가입
     if(!empty($user_id)){
      // 회원가입 자료입력 후 처리
@@ -29,12 +29,25 @@
         echo '<script name="javascript"> window.alert("Please enter the duplicate password again."); history.go(-1);</script>';
       }else{
        // 비밀번호 같으면 Insert (DB에 저장)
+      // ************** 회원가입 ***************//
+       // user Table Insert
         $param = [
             'user_id'=>$user_id,
             'user_password'=>$user_password
         ];
-       // Insert 
         $usersFunction->uploadData('INSERT INTO `user` SET `user_id` = :user_id,`user_password` = :user_password',$param);
+        
+       // userInfor Table Insert
+        $sql = 'INSERT INTO `userInfor` SET `user_id` = :user_id, `infor_point` = :infor_point, `infor_auctionCnt` = :infor_auctionCnt, ' .
+                '`infor_sfb` = :infor_sfb';
+        $param = [
+          'user_id'=>$user_id,
+          'infor_point'=>0,
+          'infor_auctionCnt'=>0,
+          'infor_sfb'=>0
+        ];
+        $usersFunction->uploadData($sql, $param);
+        
         header('location: ../php/index.php');
       }
     }else{
@@ -74,7 +87,9 @@
       include __DIR__ .'/../templates/userInForm.html.php';
       $outString = ob_get_clean();
     }
-  }else if($_GET['signtype'] == '4'){
+  }else if($_GET['signtype'] == '3'){   // 유저 상세페이지
+    header('location: ../controllers/userdetail.php?id='. $_GET['id']);
+  }else if($_GET['signtype'] == '4'){   // 로그아웃
     header('location: ../php/index.php');
   }
  }catch(PDOException $e){

@@ -1,5 +1,5 @@
 <div class="enrollment-form">
-  <form enctype="multipart/form-data" action="#" method="POST">
+  <form enctype="multipart/form-data" action="" method="POST">
     <div class="enrollment-form_image">
       <label for="file">Stuff image</label>
       <input type="file" id="file" name="article_image" required="true">

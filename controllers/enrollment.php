@@ -48,14 +48,14 @@
           'article_price'=>$price,
           'article_category'=>$category, 
           'article_sell'=>$sell,
-          'article_end'=>1
+          'article_end'=>1      // 1  = 경매진행, 2 = 경매종료
       ];
       $usersFunction->uploadData($sql,$param);
             
        // ************************* 경매물품 입찰&낙찰 Table Save ********************************************/
               /** 
                 위에서 방금저장한 DB 다시 가져와서
-                auctionItems Table에 물품등록ID 가져와 저장하여 Table연동
+                auctionItems Table에 article.article_id를 저장하여 Table연동
               */
       $sql = 'SELECT * FROM `article` WHERE `user_id` = \'' . $_GET['id'] . '\' ORDER BY `article_id` DESC';
       $result = $usersFunction->seachQurey($sql);
@@ -67,11 +67,23 @@
           'user_id'=>$_GET['id'],
           'items_price'=>$result[0][5]
       ];
-      $usersFunction->insertData($sql, $param);
-            
-      //    ****** 수정예정*****
-      // 헤더로 물품 상세페이지 이동 
-      header('location: ../php/index.php'.$user); // 임시
+      $usersFunction->uploadData($sql, $param);
+      
+    // ************************* userDetail 수정( 등록물품 수  증가 ) ********************************************/
+        // 경매 진행중인 물품만 Count
+      $sql = 'SELECT COUNT(`user_id`) FROM `article` WHERE `user_id`=\'' . $_GET['id'] . '\' AND `article_end` = 1';
+      $result = $usersFunction->seachQurey($sql);
+      $itemCnt = intval($result[0][0]);   // 물품 총 등록 개수
+      
+        // UserDetail Update
+      $sql = 'UPDATE `userInfor` SET `infor_auctionCnt` = :infor_auctionCnt WHERE `user_id` = :user_id';
+      $param = [
+        'infor_auctionCnt'=>$itemCnt,
+        'user_id'=>$_GET['id']
+      ];
+      $usersFunction->uploadData($sql, $param);
+
+      header('location: ../controllers/articleItems.php'.$user);
     }else{                     // 없을 때
       ob_start();
       include __DIR__ .'/../templates/enrollment.html.php';

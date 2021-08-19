@@ -8,7 +8,7 @@
   <body>
     <header class="main-header">
       <div class="login-bar">
-        <a href="../controllers/userInOut.php?signtype=<?=$sgintype1?>"><?=$userInform?></a>
+        <a href="<?=$userurl?>"><?=$userInform?></a>
         <a href="../controllers/userInOut.php?signtype=<?=$sgintype2?>"><?=$userInOut?></a>
       </div>
       <h1><a href="../php/index.php<?=$user?>">Auction</a></h1>

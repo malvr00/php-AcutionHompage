@@ -9,7 +9,7 @@
     
   // ************* 유저상세정보 SELECT ************* //
     $sql = 'SELECT * FROM `userInfor` WHERE `user_id`=\'' . $userid . '\'';
-    $result = $usersFunction->seachQurey($sql);
+    $result = $usersFunction->seachQuery($sql);
     
     ob_start();
     include __DIR__ .'/../templates/userdetail.html.php';

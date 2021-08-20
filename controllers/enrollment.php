@@ -58,7 +58,7 @@
                 auctionItems Table에 article.article_id를 저장하여 Table연동
               */
       $sql = 'SELECT * FROM `article` WHERE `user_id` = \'' . $_GET['id'] . '\' ORDER BY `article_id` DESC';
-      $result = $usersFunction->seachQurey($sql);
+      $result = $usersFunction->seachQuery($sql);
       
       $sql = 'INSERT INTO `auctionItems` SET `items_articleId` = :items_articleId, `user_id` = :user_id,  
               `items_price` = :items_price';
@@ -72,7 +72,7 @@
     // ************************* userDetail 수정( 등록물품 수  증가 ) ********************************************/
         // 경매 진행중인 물품만 Count
       $sql = 'SELECT COUNT(`user_id`) FROM `article` WHERE `user_id`=\'' . $_GET['id'] . '\' AND `article_end` = 1';
-      $result = $usersFunction->seachQurey($sql);
+      $result = $usersFunction->seachQuery($sql);
       $itemCnt = intval($result[0][0]);   // 물품 총 등록 개수
       
         // UserDetail Update

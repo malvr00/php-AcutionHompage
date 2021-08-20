@@ -7,7 +7,7 @@
     $usersFunction = new Userfunction($pdo);                    // SQL Class 积己
     
   // ********** 殿废等 拱前 Seach ********** //
-    $result = $usersFunction->seachQurey('SELECT * FROM `article`');
+    $result = $usersFunction->seachQuery('SELECT * FROM `article`');
      
     ob_start();
     include __DIR__ .'/../templates/articleItems.html.php';

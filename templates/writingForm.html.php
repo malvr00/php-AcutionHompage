@@ -5,7 +5,7 @@
     <span>Writer:<?=$usersText['user_id']?></span>
   </div>
 <?php endforeach; ?>
-<form action="#" method="post">
-    <input type="hidden" name="user_id" value="100">
+<form action="" method="post">
+    <input type="hidden" name="write" value="1">
     <input type="submit" value="write">
 </form>

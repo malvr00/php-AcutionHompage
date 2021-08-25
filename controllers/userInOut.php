@@ -62,7 +62,7 @@
   }else if($_GET['signtype'] == '2'){   // 로그인
     if(!empty($user_id)){
       // 로그인 자료입력 후 처리
-      $row = $usersFunction->seachQurey('SELECT * FROM `user`');  // User들 정보 반환
+      $row = $usersFunction->seachQuery('SELECT * FROM `user`');  // User들 정보 반환
       foreach($row as $users){
         if($users['user_id'] != $user_id){
          // 아이디 확인

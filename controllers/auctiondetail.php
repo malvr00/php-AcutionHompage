@@ -13,10 +13,12 @@
     $sql = 'SELECT * FROM `article` WHERE `article_id` = ' . $auctionId;
     $result1 = $usersFunction->seachQuery($sql);
     
+    // 글 작성자만 수정버튼 보이도록 변수지정
+    $userConfirm = ($userId == $result1[0]['user_id'])?true:false; 
+    
   // ********** 경매 입찰 & 낙찰 현황정보 **********/
     $sql = 'SELECT * FROM `auctionItems` WHERE `items_articleId` = ' . $auctionId;
     $buyuser = $usersFunction->seachQuery($sql);
-    
   // 입찰 낙찰 정보
     $price = intval(htmlspecialchars($_POST['items_price'], ENT_QUOTES, 'UTF-8'));    // 입찰 가격 정보
     $sell = intval(htmlspecialchars($_POST['article_sell'], ENT_QUOTES, 'UTF-8'));    // 낙찰 가격 정보

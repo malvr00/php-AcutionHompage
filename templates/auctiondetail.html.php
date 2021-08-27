@@ -15,6 +15,11 @@
         <input type="text" name="article_sell" placeholder="immediate sale price">
         <input type="submit" value="buy">
       </form>
+      <?php if($userConfirm) {?>
+        <a href="../controllers/auctionDelete.php<?=$user?>&auction=<?=$auctionId?>">
+          <input type="button" value="DELETE">
+        </a>
+      <?php }?>
       <aside>
         <table border="1">
           <tr>

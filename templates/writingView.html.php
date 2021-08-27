@@ -11,6 +11,9 @@
     <?php if($userConfirm) {?>
       <form action="../controllers/writingModify.php<?=$user?>&pageid=<?=$pageid?>" method="POST">
         <input type="submit" value="Modify">
+        <a href="../controllers/writingDelete.php<?=$user?>&pageid=<?=$pageid?>">
+          <input type="button" value="DELETE">
+        </a>
       </form>
     <?php }?>
   </div>

@@ -15,7 +15,7 @@
   
  // 글 작성자만 수정버튼 보이도록 변수지정
   $userConfirm = ($userid == $view[0]['user_id'])?true:false;     
-  
+
 // *************** 게시글 댓글정보 ( Select ) *************** //
   $sql = 'SELECT * FROM `comment` WHERE `writing_id` = ' . $pageid;
   $comments = $usersFunction->seachQuery($sql);

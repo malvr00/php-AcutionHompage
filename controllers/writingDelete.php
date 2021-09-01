@@ -15,6 +15,13 @@
   ];
   $usersFunction->uploadData($sql, $param);
   
+// ******************* pageid로 현제 페이지 댓글 Delete ******************* //
+  $sql='DELETE FROM `comment` WHERE `writing_id` = :writing_id';
+  $param = [
+    'writing_id'=>$pageid
+  ];
+  $usersFunction->uploadData($sql, $param);
+  
 // 게시글 삭제 후 이동
   header('location: writing.php' . $user);
   

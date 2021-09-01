@@ -40,7 +40,21 @@
     'items_articleId'=>$auctionid
   ];
   $usersFunction->uploadData($sql, $param);
-
+  
+// ************************* userDetail 수정( 등록물품 수  증가 ) ********************************************/
+ // 경매 진행중인 물품만 Count
+  $sql = 'SELECT COUNT(`user_id`) FROM `article` WHERE `user_id`=\'' . $_GET['id'] . '\' AND `article_end` = 1';
+  $result = $usersFunction->seachQuery($sql);
+  $itemCnt = intval($result[0][0]);   // 물품 총 등록 개수
+  
+ // UserDetail Update ( 등록물품 수 업데이트 )
+  $sql = 'UPDATE `userInfor` SET `infor_auctionCnt` = :infor_auctionCnt WHERE `user_id` = :user_id';
+  $param = [
+    'infor_auctionCnt'=>$itemCnt,
+    'user_id'=>$_GET['id']
+  ];
+  $usersFunction->uploadData($sql, $param);
+  
 // 물품 삭제 후 이동
   header('location: ../php/index.php' . $user);
   

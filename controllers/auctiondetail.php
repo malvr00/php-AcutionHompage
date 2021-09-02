@@ -7,7 +7,7 @@
     $userId = $_GET['?id'];                   // user id
     $auctionId = $_GET['auction'];            // auction id
     $usersFunction = new Userfunction($pdo);  // SQL Class 생성
-    
+
   // ********** SQL Query Select ( 클릭한 물품 Seach ) ********** /
     // 판매자 정보
     $sql = 'SELECT * FROM `article` WHERE `article_id` = ' . $auctionId;
@@ -36,6 +36,15 @@
     $sql = 'SELECT `user_id`, `infor_point` FROM `userInfor` WHERE `user_id` = \'' . $buyuser[0]['user_id'] . '\'';
     $priceUserPoint = $usersFunction->seachQuery($sql);
     
+  // 페이지 접속시 조회수 1증가
+    $view = $result1[0]['article_views'] + 1;
+    $sql = 'UPDATE `article` SET `article_views` = :article_views WHERE `article_id` = :article_id';
+    $param = [
+      'article_views'=>$view,
+      'article_id'=>$auctionId
+    ];
+    $usersFunction->uploadData($sql, $param);
+
     if(!empty($price)){ // 입찰가격 Update
       if($price > (int)$payUserPoint[0]['infor_point']){  // 유저가 가지고 있는 포인트가 입찰 가격보다 낮을 경우
       // 포인트가 낮으면 경고문 발생
@@ -146,4 +155,3 @@
     $outString='<p>Error : ' . $e->getMessage(). $e->getFile(). ' Line : ' . $e->getLine() .'</p>';
   }
   include __DIR__ .'/../templates/layout.html.php';
-  

@@ -5,6 +5,7 @@
         <?php echo '<img src="data:image/bmp;base64,' . base64_encode( $array['article_image'] ) . '" />';?>
         <h4><?php echo $array['article_title']; ?> </h4>
       </a>
+      <span>View : <?=$array['article_views']?></span>
     </div>
   <?php }?>
 <?php } ?>

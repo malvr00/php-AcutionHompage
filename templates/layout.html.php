@@ -18,7 +18,19 @@
       <ul>
         <li><a href="../controllers/writing.php<?=$user?>">User bulletin board </a></li>
         <li><a href="../controllers/articleItems.php<?=$user?>">Auction bulletin board</a></li>
-        <li><a href="../controllers/enrollment.php<?=$user?>">Auction Enrollment</a></li>
+        <li>
+          <div class="status-bar_category">
+            <a href="../controllers/enrollment.php<?=$user?>">Auction Enrollment</a>
+          </div>
+          <div class="status-bar_category_m1">
+            <ul>
+              <li><a href="../controllers/categoryMenu.php<?=$user?>&cate=toy">Toy</a></li>
+              <li><a href="../controllers/categoryMenu.php<?=$user?>&cate=elec">Elec</a></li>
+              <li><a href="../controllers/categoryMenu.php<?=$user?>&cate=food">Food</a></li>
+              <li><a href="../controllers/categoryMenu.php<?=$user?>&cate=etc">Etc</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     

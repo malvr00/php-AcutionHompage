@@ -39,7 +39,7 @@
        // *************************물품등록 Table Save ********************************************/
       $sql = 'INSERT INTO `article` SET `user_id` = :user_id, `article_title` = :article_title, `article_image` = :article_image,
               `article_discription` = :article_discription, `article_price` = :article_price, `article_category` = :article_category,
-              `article_sell` = :article_sell, `article_end` = :article_end';
+              `article_sell` = :article_sell, `article_views` = :article_views, `article_end` = :article_end';
       $param = [
           'user_id'=>$_GET['id'], 
           'article_title'=>$title, 
@@ -48,6 +48,7 @@
           'article_price'=>$price,
           'article_category'=>$category, 
           'article_sell'=>$sell,
+          'article_views'=>0,
           'article_end'=>1      // 1  = 경매진행, 2 = 경매종료
       ];
       $usersFunction->uploadData($sql,$param);

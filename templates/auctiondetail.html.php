@@ -16,9 +16,12 @@
         <input type="submit" value="buy">
       </form>
       <?php if($userConfirm) {?>
-        <a href="../controllers/auctionDelete.php<?=$user?>&auction=<?=$auctionId?>">
-          <input type="button" value="DELETE">
-        </a>
+        <div class="auction-detail_Infor_endBt">
+          <a href="../controllers/auctionDelete.php<?=$user?>&auction=<?=$auctionId?>"><input type="button" value="DELETE"></a>
+          <a href="../controllers/auctionEnd.php<?=$user?>&auction=<?=$auctionId?>">
+            <input type="button" value="END">
+          </a>
+        </div>
       <?php }?>
       <aside>
         <table border="1">

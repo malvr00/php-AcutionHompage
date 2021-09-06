@@ -1,0 +1,39 @@
+.status-bar {
+  padding: 20px;
+  background-color: rgb(135, 180, 45);
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.status-bar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.status-bar__li {
+  margin-left: 150px;
+}
+
+.status-bar_category {
+  margin-right: 150px;
+}
+
+.status-bar_category:hover {
+  text-align: center;
+  color: red;
+}
+
+.status-bar_category_m1 {
+  display: none;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.status-bar_category_m1 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.status-bar_category_m1 ul li {
+  margin-top: 10px;
+}

@@ -14,13 +14,20 @@
 
 ## Pages && Includes
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
-  1.
-2.
+1. 물품출력
 
 * Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)
+1. 등록
 
 * LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)
+1. 로그인
+2. 회원가입
+3. 로그아웃
 
 * User bulletin board page 
+1. 게시판 등록
+2. 게시글 삭제
+3. 게시글 수정
+4. 댓글 등록
 
 * Form File [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/templates)

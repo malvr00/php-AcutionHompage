@@ -14,6 +14,8 @@
 
 ## Pages && Includes
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
+  1.
+2.
 
 * Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)
 

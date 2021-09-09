@@ -1,7 +1,17 @@
 @import "reset.css";
 
+/* footer */
+@import "footer/footer.css";
+
+/* button */
+@import "inputbutton/button.css";
+
 /* header */
 @import "main-header/login-bar.css";
 
 /* nav ( Status-Bar ) */
 @import "statusbar/status-bar.css";
+
+/* Items Screen  */
+@import "viewItems/articleItems.css";
+@import "viewItems/articledetail.css";

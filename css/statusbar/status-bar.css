@@ -1,13 +1,15 @@
 .status-bar {
   padding: 20px;
-  background-color: rgb(135, 180, 45);
+  background-color: #5e7e9b;
   margin: 5px;
   box-sizing: border-box;
+  color: white;
 }
 
 .status-bar ul {
   display: flex;
   justify-content: space-between;
+  margin: 0px 40px 0px 40px;
 }
 .status-bar__li {
   margin-left: 150px;
@@ -19,12 +21,10 @@
 
 .status-bar_category:hover {
   text-align: center;
-  color: red;
 }
 
 .status-bar_category_m1 {
   display: none;
-  width: 50%;
   margin-top: 10px;
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  align-items: center;
 }
 
 .status-bar_category_m1 ul li {

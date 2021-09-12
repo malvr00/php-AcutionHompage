@@ -1,0 +1,21 @@
+.user-writing {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px 0px 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.user-writing span {
+  font-size: 20px;
+}
+
+.user-writing a {
+  font-size: 23px;
+}
+
+.user-writing_form {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 15px 0px 0px;
+}

@@ -1,0 +1,40 @@
+.writing-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.writing-form label {
+  font-size: 20px;
+}
+
+.writing-form_title input[type="text"] {
+  width: 400px;
+  height: 30px;
+  border: 2px solid gray;
+}
+
+.writing-form_title input[type="text"]:focus {
+  outline: none;
+}
+
+.writing-form_discription {
+  margin-top: 20px;
+}
+
+.writing-form_discription textarea {
+  width: 715px;
+  height: 470px;
+  margin-top: 20px;
+  font-size: 18px;
+  resize: none;
+}
+
+.writing-form_discription textarea:focus {
+  outline: none;
+}
+.writing-form_submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}

@@ -1,0 +1,79 @@
+.writingView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.writing-view {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.writing-view_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+}
+
+.writing-view_title span:first-child {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.writing-view_title span:last-child {
+  font-size: 20px;
+}
+
+.writing-view_discription p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  word-wrap: break-word;
+}
+
+.writing-view_writer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.writing-comment {
+  width: 80%;
+}
+.writing-comment_input form {
+  display: flex;
+  align-items: center;
+}
+
+.writing-comment_input textarea {
+  width: 100%;
+  height: 110px;
+  resize: none;
+  margin-top: 10px;
+}
+
+.writing-comment_input input[type="submit"] {
+  height: 110px;
+  margin: 10px 0px 0px 5px;
+}
+
+.writing-comment_input span {
+  font-weight: bold;
+}
+
+.writing-comment_comments {
+  border: 1px solid #f08080;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 97%;
+}
+
+.writing-comment_comments span {
+  font-weight: bold;
+}
+
+.writing-comment_comments p {
+  margin-top: 10px;
+  word-wrap: break-word;
+}

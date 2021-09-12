@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <title><?=$title?></title>
  </head>
- <body>
+ <body class="login-body">
   <div class="login-form">
     <?=$outString?>
   </div>

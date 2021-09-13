@@ -30,4 +30,16 @@
 3. 게시글 수정
 4. 댓글 등록
 
+* Items
+1. 물품 등록
+2. 물품 입찰
+3. 물품 즉매
+4. 물품 낙찰
+5. 물품 등록 삭제
+
+* User
+1. 포인트 충전
+2. 등록한 물품 수 확인
+3. 낙찰 받은 수 확인
+
 * Form File [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/templates)

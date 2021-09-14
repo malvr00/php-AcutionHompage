@@ -16,9 +16,6 @@
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
 1. 물품출력
 
-* Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)
-1. 등록
-
 * LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)
 1. 로그인
 2. 회원가입

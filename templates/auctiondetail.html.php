@@ -39,4 +39,8 @@
       </div>
     </div>
   </div>
+  <div class="auction-detail_discription">
+    <span>Product Information</span>
+    <p><?=$result1[0][4]?></p>
+  </div>
 </div>

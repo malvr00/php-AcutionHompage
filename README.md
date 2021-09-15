@@ -16,9 +16,6 @@
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
 1. 물품출력
 
-* Auction enrollment Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php)
-1. 등록
-
 * LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)
 1. 로그인
 2. 회원가입
@@ -29,5 +26,17 @@
 2. 게시글 삭제
 3. 게시글 수정
 4. 댓글 등록
+
+* Items
+1. 물품 등록
+2. 물품 입찰
+3. 물품 즉매
+4. 물품 낙찰
+5. 물품 등록 삭제
+
+* User
+1. 포인트 충전
+2. 등록한 물품 수 확인
+3. 낙찰 받은 수 확인
 
 * Form File [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/templates)

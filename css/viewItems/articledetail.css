@@ -66,9 +66,27 @@
 
 .auction-detail_bidding_detail table th,
 td {
-  border: 1px solid #444444;
+  border: 1px solid #919191;
 }
 
 .auction-detail_bidding_detail table td {
   padding: 5px;
+}
+
+.auction-detail_discription {
+  width: 60%;
+  margin: 30px;
+  border: 1px solid #5e7e9b;
+  padding: 15px;
+}
+
+.auction-detail_discription span {
+  font-size: 20px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+.auction-detail_discription p {
+  margin-top: 25px;
+  word-wrap: break-word;
 }

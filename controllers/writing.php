@@ -34,6 +34,13 @@ try{
     $first = (($block-1) * $listpage) + 1;            // 첫 번째 페이지
     $last = $block * $listpage;                       // 마지막 페이지
 
+ // 이전 페이지 변수
+    if($first >= 11){
+      $beforPage = $first - 10;
+    } else{
+      $beforPage = 1;
+    }
+    
   // ******************** 유저 게시글 Select Limit  ( 10개씩 불러옴) ******************** //
     $sql = 'SELECT * FROM `writing` limit ' . $nowpage . ', ' . $listpage;
     $result = $usersFunction->seachQuery($sql);

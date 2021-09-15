@@ -8,7 +8,9 @@
     <label for="userPassword">PassWord</label>
     <input type="password" name="user_password" required minlength="4" maxlength="15" id="userid">
     <input type="password" name="user_password2" required minlength="4" maxlength="15" id="userid">
-  <input type="submit" value="<?=$button?>">
+    <div class="user-form_bottom">
+      <input type="submit" value="<?=$button?>">
+    </div>
   </div>
   
 </form>

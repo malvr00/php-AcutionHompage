@@ -1,6 +1,6 @@
 # PHP Auction Server is Apache & OS is CentOS
 중고물품 또는 새로운 물품들 경매하는 경매장 사이트.
-포인트를 활용하여 물품 경매참여.
+<br>포인트를 활용하여 물품 경매참여.
 
 ## DB Table
 <pre> 
@@ -18,7 +18,6 @@
 > 로그인 유저 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/userInformation.php)
 
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
-1. 물품출력
 
 * LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)
 1. 로그인  [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php#L62-L89)
@@ -30,7 +29,7 @@
 * User  [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userdetail.php)
 1. 포인트 충전 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/charging.php)
 2. 등록한 물품 수 확인 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/enrollment.php#L73-L86) / 물품 등록할 때 카운트
-3. 낙찰 받은 수 확인 [[코드1]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/auctionEnd.php#L53-L63) [[코드2]]
+3. 낙찰 받은 수 확인 [[코드1]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/auctionEnd.php#L53-L63) [[코드2]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/auctiondetail.php#L114-L125)
 
 * User bulletin board page 
 > 게시글 수정 및 삭제는 게시글 등록자만 볼 수 있도록 설정 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/writingView.php#L16-L17)
@@ -57,4 +56,4 @@
 * SQL Class [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/Userfunction.php)
 * Db Connect [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/DbConnect.php)
 * CSS [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/css)
-> main css [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/css/style.css)
+1. main css [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/css/style.css)

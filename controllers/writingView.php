@@ -1,22 +1,22 @@
 <?php
  try{
-  include_once __DIR__ .'/../includes/DbConnect.php';         // db ¿¬°á
-  include_once __DIR__ .'/../includes/userInformation.php';   // ·Î±×ÀÎ À¯ÀúÁ¤º¸
+  include_once __DIR__ .'/../includes/DbConnect.php';         // db ì—°ê²°
+  include_once __DIR__ .'/../includes/userInformation.php';   // ë¡œê·¸ì¸ ìœ ì €ì •ë³´
   include_once __DIR__ .'/../includes/Userfunction.php';      // SQL Class
   
-  $usersFunction = new Userfunction($pdo);  // SQL Class »ý¼º
-  $userid = htmlspecialchars($_GET['id'], ENT_QUOTES, 'UTF-8');              // ·Î±×ÀÎ À¯Àú id
-  $pageid = intval(htmlspecialchars($_GET['pageid'], ENT_QUOTES, 'UTF-8'));  // °Ô½Ã±Û id
+  $usersFunction = new Userfunction($pdo);  // SQL Class ìƒì„±
+  $userid = htmlspecialchars($_GET['id'], ENT_QUOTES, 'UTF-8');              // ë¡œê·¸ì¸ ìœ ì € id
+  $pageid = intval(htmlspecialchars($_GET['pageid'], ENT_QUOTES, 'UTF-8'));  // ê²Œì‹œê¸€ id
 
-// *************** Å¬¸¯ÇÑ °Ô½Ã±Û³»¿ë ( Select ) *************** //
-  // GetÀ¸·Î žjÀº pageid·Î Ã£À½
+// *************** í´ë¦­í•œ ê²Œì‹œê¸€ë‚´ìš© ( Select ) *************** //
+  // Getìœ¼ë¡œ ì€ pageidë¡œ ì°¾ìŒ
   $sql = 'SELECT `user_id`, `title`, `discription` FROM `writing` WHERE `id` = ' . $pageid;
-  $view = $usersFunction->seachQuery($sql);     // ±Û ÀÛ¼ºÀÚ Á¤º¸
+  $view = $usersFunction->seachQuery($sql);     // ê¸€ ìž‘ì„±ìž ì •ë³´
   
- // ±Û ÀÛ¼ºÀÚ¸¸ ¼öÁ¤¹öÆ° º¸ÀÌµµ·Ï º¯¼öÁöÁ¤
+ // ê¸€ ìž‘ì„±ìžë§Œ ìˆ˜ì •ë²„íŠ¼ ë³´ì´ë„ë¡ ë³€ìˆ˜ì§€ì •
   $userConfirm = ($userid == $view[0]['user_id'])?true:false;     
 
-// *************** °Ô½Ã±Û ´ñ±ÛÁ¤º¸ ( Select ) *************** //
+// *************** ê²Œì‹œê¸€ ëŒ“ê¸€ì •ë³´ ( Select ) *************** //
   $sql = 'SELECT * FROM `comment` WHERE `writing_id` = ' . $pageid;
   $comments = $usersFunction->seachQuery($sql);
 

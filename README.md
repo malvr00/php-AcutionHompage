@@ -17,6 +17,8 @@
 ## Pages && Includes
 > 로그인 유저 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/userInformation.php)
 
+<img src="https://user-images.githubusercontent.com/77275513/133574573-a9c9a2f2-aaf4-4ef3-b9af-22a9a0fb3c81.PNG" width="400px" height="400px" title="100px" alt="RubberDuck"></img><br/> 
+
 * Main page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/php/index.php)
 
 * LogIn . Out & SignIn Page [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php)

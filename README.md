@@ -26,7 +26,7 @@
 2. 회원가입 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php#L16-L61)
 3. 로그아웃 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php#L92-L93)
 4. 회원탈퇴 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userSecession.php)
-5. 유저 상세정보 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userInOut.php#L90-L91)
+5. 유저 상세정보 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userdetail.php)
 
 * User  [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/userdetail.php)
 1. 포인트 충전 [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/controllers/charging.php)

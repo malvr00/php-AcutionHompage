@@ -1,7 +1,7 @@
 # PHP Auction Server is Apache & OS is CentOS
 중고물품 또는 새로운 물품들 경매하는 경매장 사이트.
 <br>포인트를 활용하여 물품 경매참여.
-<br>
+<br/>
 <img src="https://user-images.githubusercontent.com/77275513/133574573-a9c9a2f2-aaf4-4ef3-b9af-22a9a0fb3c81.PNG" width="800px" height="600px" title="100px" alt="RubberDuck"></img><br/> 
 ## DB Table
 <pre> 
@@ -57,6 +57,7 @@
 * SQL Class [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/Userfunction.php)
 * Db Connect [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/includes/DbConnect.php)
 * CSS [[위치]](https://github.com/malvr00/php-AcutionHompage/tree/main/css)
+
 1. main css [[코드]](https://github.com/malvr00/php-AcutionHompage/blob/main/css/style.css)
 
 
